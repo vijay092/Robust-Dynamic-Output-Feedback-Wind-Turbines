@@ -14,12 +14,12 @@ load LinMat
 % So, can we model this an uncertainty block? 
 
 % Define the matrices;
-az = 35; % select the azimuth angle you want to choose for the nom sys
+az = 13; % select the azimuth angle you want to choose for the nom sys
 wnd = 20; % select the azimuth angle you want to choose for the nom sys
 
 % I have used the following notation wrt Prof. Seiler's notes
 % Lecture 18
-gamma_d = 1e-10;
+gamma_d = 1e-20;
 
 % xdot
 A = Ag(:,:,az,wnd); 
@@ -30,7 +30,7 @@ B3 = eye(n);
 
 % z
 C1 = Cg(1,:,az,wnd);
-D13 = 0*Dg(1,:,az,wnd); 
+D13 = Dg(1,:,az,wnd); 
 D11 = zeros(1,n); 
 
 % v
