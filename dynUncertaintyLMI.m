@@ -1,7 +1,7 @@
 function [P, lam, gamma_p_sq] = dynUncertaintyLMI(A,B1,B3,C1,C3,D11,D13,D31,D33,gamma_d)
 
 n = length(A);
-nu = size(B,2);
+nu = size(B1,2);
 del = 1e-3;
 
 cvx_solver sedumi
